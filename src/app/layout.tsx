@@ -1,9 +1,17 @@
+import { Sora } from "next/font/google";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/layout/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+import Header from "@/layout/Header";
+import TopLeftImg from "@/modules/TopLeftImg";
+import Nav from "@/modules/Nav";
+
+import "./globals.css";
+
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-sora",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+});
 
 export const metadata: Metadata = {
   title: "Portfolio App",
@@ -17,7 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={`page bg-site text-white bg-cover bg-no-repeat ${sora.className} font-sora relative`}
+      >
+        <TopLeftImg />
+        <Nav />
         <Header />
         {children}
       </body>
