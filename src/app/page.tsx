@@ -1,5 +1,7 @@
+import MotionProviders from "@/providers/MotionProviders";
+
 const Home = () => {
-  return <div>Home</div>;
+  return <MotionProviders>Home</MotionProviders>;
 };
 
 export default Home;

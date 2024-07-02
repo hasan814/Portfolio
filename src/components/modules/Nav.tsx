@@ -2,6 +2,7 @@
 
 import { HiHome, HiUser } from "react-icons/hi";
 import { v4 as uuidv4 } from "uuid";
+import { usePathname } from "next/navigation";
 import {
   HiViewColumns,
   HiRectangleGroup,
@@ -10,7 +11,7 @@ import {
 } from "react-icons/hi2";
 
 import Link from "next/link";
-import { useParams, usePathname } from "next/navigation";
+import React from "react";
 
 // nav data
 export const navData = [
