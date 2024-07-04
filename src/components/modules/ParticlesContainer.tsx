@@ -1,4 +1,3 @@
-// ParticlesContainer.tsx
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -36,7 +35,7 @@ const ParticlesContainer = () => {
         events: {
           onClick: { enable: false, mode: "push" },
           onHover: { enable: true, mode: "repulse" },
-          resize: true,
+          resize: { enable: true }, // Change this line
         },
         modes: {
           push: { quantity: 90 },

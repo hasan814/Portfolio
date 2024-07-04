@@ -215,11 +215,12 @@ const AboutPage = () => {
                 <div className="hidden md:flex">-</div>
                 <div>{item.stage}</div>
                 <div className="flex gap-x-4">
-                  {item.icons?.map((icon, itemIndex) => (
-                    <div className="text-2xl text-white" key={itemIndex}>
-                      {icon}
-                    </div>
-                  ))}
+                  {"icons" in item &&
+                    item.icons?.map((icon, iconIndex) => (
+                      <div className="text-2xl text-white" key={iconIndex}>
+                        {icon}
+                      </div>
+                    ))}
                 </div>
               </div>
             ))}

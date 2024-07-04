@@ -13,3 +13,9 @@ export interface AboutDataType {
   title: string;
   info: (SkillInfoType | InfoType)[];
 }
+
+export type Service = {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+};
